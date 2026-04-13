@@ -1,0 +1,39 @@
+<div class="panel">
+  <h3>Terms & Conditions Management</h3>
+
+  <form id="terms-form" class="grid-2">
+    <input type="hidden" name="id" />
+
+    <!-- Heading -->
+    <div class="form-row">
+      <label>Heading</label>
+      <input class="input" name="heading" placeholder="Enter section heading" required />
+    </div>
+
+    <!-- Summary -->
+    <div class="form-row full-span">
+      <label>Summary</label>
+      <textarea class="textarea" name="summary" placeholder="Write summary or description..." required></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="actions">
+      <button class="btn" type="submit">Save Section</button>
+      <button class="btn alt" type="button" id="terms-form-reset">Cancel Edit</button>
+    </div>
+  </form>
+
+  <!-- Table -->
+  <div class="table-wrap mt-12">
+    <table>
+      <thead>
+        <tr>
+          <th>Heading</th>
+          <th>Summary</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="terms-table"></tbody>
+    </table>
+  </div>
+</div>

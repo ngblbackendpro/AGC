@@ -1,0 +1,21 @@
+<div class="panel">
+  <h3>Careers Management</h3>
+  <form id="career-form" class="grid-2">
+    <input type="hidden" name="id" />
+    <div class="form-row"><label>Job Title</label><input class="input" name="title" required /></div>
+    <div class="form-row"><label>Job Type</label><select class="select" name="type"><option>Full Time</option><option>Part Time</option></select></div>
+    <div class="form-row"><label>Mode</label><select class="select" name="mode"><option>Hybrid</option><option>Remote</option><option>Onsite</option></select></div>
+    <div class="form-row"><label>Apply Link</label><input class="input" name="applyLink" required /></div>
+    <div class="form-row full-span"><label>Description</label><textarea class="textarea" name="description" required></textarea></div>
+    <div class="actions">
+      <button class="btn" type="submit">Save Job</button>
+      <button class="btn alt" type="button" id="career-form-reset">Cancel Edit</button>
+    </div>
+  </form>
+  <div class="table-wrap mt-12">
+    <table>
+      <thead><tr><th>Title</th><th>Type</th><th>Mode</th><th>Actions</th></tr></thead>
+      <tbody id="careers-table"></tbody>
+    </table>
+  </div>
+</div>

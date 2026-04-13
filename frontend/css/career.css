@@ -1,0 +1,314 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+ 
+
+/* ================= CAREER HERO REDESIGN ================= */
+
+.career-hero {
+  padding: 40px 8%;
+  background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Content */
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #555;
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* Image Row */
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Images */
+
+.image-row img {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Zig-Zag Effect */
+
+.image-row img:nth-child(odd) {
+  transform: translateY(40px);
+}
+
+.image-row img:nth-child(even) {
+  transform: translateY(-40px);
+}
+
+/* Hover */
+
+.image-row img:hover {
+  transform: translateY(0) scale(1.05);
+}
+/* Base Image Styling */
+.image-row img {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+/* Floating Animation Keyframes */
+@keyframes floatUp {
+  0% { transform: translateY(40px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(40px); }
+}
+
+@keyframes floatDown {
+  0% { transform: translateY(-40px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(-40px); }
+}
+
+/* Apply Zig-Zag Floating */
+.image-row img:nth-child(odd) {
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+.image-row img:nth-child(even) {
+  animation: floatDown 4s ease-in-out infinite;
+}
+
+/* Hover Effect */
+.image-row img:hover {
+  animation: none;
+  transform: translateY(0) scale(1.08);
+  z-index: 2;
+}
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .image-row {
+    flex-wrap: wrap;
+  }
+
+  .image-row img {
+    width: 45%;
+    height: 260px;
+    transform: translateY(0) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+}
+
+/* ================= JOB SECTION ================= */
+
+/* ================= CAREER SECTION ================= */
+
+.career-opportunities {
+  padding: 120px 8%;
+  background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 17px;
+}
+
+/* Grid */
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* Base Card */
+
+.job-card {
+  padding: 35px;
+  border-radius: 24px;
+  transition: all 0.5s cubic-bezier(.22,1,.36,1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= FULL TIME JOB STYLE ================= */
+
+.job-card.job {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.job-card.job::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #4f46e5, #306beb);
+}
+
+.job-card.job:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 70px rgba(57, 113, 232, 0.2);
+}
+
+/* ================= INTERNSHIP STYLE ================= */
+
+.job-card.internship {
+  background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+.job-card.internship::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #3f33ea, #639cf1);
+}
+
+.job-card.internship:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 70px rgba(147, 51, 234, 0.25);
+}
+
+/* Top */
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.job-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Badge */
+
+.badge {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.job-badge {
+  background: linear-gradient(135deg, #4f46e5, #3a49ed);
+}
+
+.intern-badge {
+  background: linear-gradient(135deg, #3336ea, #6366f1);
+}
+
+/* Meta & Desc */
+
+.job-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.job-desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+
+.apply-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.4s ease;
+  color: white;
+}
+
+.job-btn {
+  background: linear-gradient(135deg, #4f46e5, #3a64ed);
+}
+
+.job-btn:hover {
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.4);
+  transform: translateX(6px);
+}
+
+.intern-btn {
+  background: linear-gradient(135deg, #3f33ea, #6366f1);
+}
+
+.intern-btn:hover {
+  box-shadow: 0 10px 30px rgba(63, 51, 234, 0.4);
+  transform: translateX(6px);
+}

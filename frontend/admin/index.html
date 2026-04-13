@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Arora Global</title>
+    <link rel="stylesheet" href="css/admin-login.css" />
+    <script defer src="js/admin-data.js"></script>
+    <script defer src="js/admin-auth.js"></script>
+  </head>
+  <body class="admin-login">
+    <form class="login-card" id="login-form">
+      <h1>Admin Panel Login</h1>
+      <p class="login-hint">Use demo credentials to access dashboard controls.</p>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input class="input" id="email" type="email" placeholder="admin@aroraglobal.com" required />
+      </div>
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input class="input" id="password" type="password" placeholder="admin123" required />
+      </div>
+      <button class="btn" type="submit">Sign In</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </body>
+</html>
