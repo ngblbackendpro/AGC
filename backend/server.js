@@ -19,7 +19,14 @@ const inquiry = require('./routes/inquiryRoutes');
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    process.env.CLIENT_URL,
+    "http://127.0.0.1:5500"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));

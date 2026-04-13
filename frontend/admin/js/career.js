@@ -1,5 +1,7 @@
 (function () {
-  const API = "http://localhost:5000";
+  // const API = "http://localhost:5000";
+  const API = "https://agc-arap.onrender.com";
+  
 window.AdminApp = window.AdminApp || {};
 const app = window.AdminApp;
 
