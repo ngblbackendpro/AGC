@@ -19,12 +19,22 @@ const inquiry = require('./routes/inquiryRoutes');
 
 connectDB();
 
+const allowedOrigins = [
+  process.env.WEBSITE_URL || "https://ngbl.in",
+  process.env.ADMIN_URL || "https://adminpanel.aroraglobal.co.in",
+  "http://localhost:5500",
+  "http://127.0.0.1:5500"
+];
+
 app.use(cors({
-  origin: [
-    process.env.CLIENT_URL,
-    "http://127.0.0.1:5500"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: function (origin, callback) {
+   
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
