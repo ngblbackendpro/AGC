@@ -20,7 +20,7 @@ const inquiry = require('./routes/inquiryRoutes');
 connectDB();
 
 const allowedOrigins = [
-  process.env.WEBSITE_URL || "https://ngbl.in",
+  process.env.WEBSITE_URL || "https://aroraglobal.co.in",
   process.env.ADMIN_URL || "https://adminpanel.aroraglobal.co.in",
   "http://localhost:5500",
   "http://127.0.0.1:5500"
