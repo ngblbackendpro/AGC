@@ -45,6 +45,10 @@ app.get('/', (req, res)=>{
     res.send('Home Page');
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("Server is alive");
+});
+
 
 app.use('/api/blogs', blogs);
 app.use('/api/teams', teams);
